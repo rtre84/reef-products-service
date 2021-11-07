@@ -21,7 +21,7 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.json())
 
-const port = 80
+const port = process.env.PORT || 80
 
 app.get("/products", (req, res) => {
   return res.json(data)
