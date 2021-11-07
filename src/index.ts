@@ -21,7 +21,7 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.json())
 
-const port = 4000
+const port = 80
 
 app.get("/products", (req, res) => {
   return res.json(data)
@@ -40,7 +40,7 @@ app.get("/order/:orderId", (req, res) => {
   if (order) {
     return res.json({
       success: true,
-      products: order.products 
+      products: order.products
     })
   } else {
     return res.json({
