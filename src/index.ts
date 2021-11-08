@@ -23,6 +23,9 @@ app.use(bodyParser.json())
 
 const port = process.env.PORT || 80
 
+app.get("/health", (req, res) =>
+    res.status(200).json({ status: "ok" }));
+
 app.get("/products", (req, res) => {
   return res.json(data)
 })
